@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DocumentVerifier.Api/DocumentVerifier.Api.csproj" />
+    <Project Path="src/DocumentVerifier.Application/DocumentVerifier.Application.csproj" />
+    <Project Path="src/DocumentVerifier.Domain/DocumentVerifier.Domain.csproj" />
+    <Project Path="src/DocumentVerifier.Infrastructure/DocumentVerifier.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DocumentVerifier.IntegrationTests/DocumentVerifier.IntegrationTests.csproj" />
+    <Project Path="tests/DocumentVerifier.UnitTests/DocumentVerifier.UnitTests.csproj" />
+  </Folder>
+</Solution>

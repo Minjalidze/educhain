@@ -1,0 +1,35 @@
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Secrets
+.env
+.env.*
+!.env.example
+!frontend/web/.env.local.example
+!blockchain/.env.example
+
+# .NET
+bin/
+obj/
+TestResults/
+*.user
+*.suo
+
+# Node
+node_modules/
+npm-debug.log*
+.next/
+out/
+dist/
+
+# Hardhat
+blockchain/cache/
+blockchain/artifacts/
+blockchain/deployments/*.json
+
+# Logs
+*.log
+blockchain/typechain-types

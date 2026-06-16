@@ -1,0 +1,148 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "DocumentAlreadyExists",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "DocumentNotFound",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "EmptyDocumentHash",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OnlyIssuer",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OnlyOwner",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "RevokeForbidden",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ZeroAddress",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": true, "internalType": "bytes32", "name": "documentHash", "type": "bytes32" },
+      { "indexed": true, "internalType": "address", "name": "issuer", "type": "address" },
+      { "indexed": false, "internalType": "uint256", "name": "issuedAt", "type": "uint256" }
+    ],
+    "name": "DocumentAdded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": true, "internalType": "bytes32", "name": "documentHash", "type": "bytes32" },
+      { "indexed": true, "internalType": "address", "name": "issuer", "type": "address" },
+      { "indexed": false, "internalType": "uint256", "name": "revokedAt", "type": "uint256" }
+    ],
+    "name": "DocumentRevoked",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": true, "internalType": "address", "name": "issuer", "type": "address" }
+    ],
+    "name": "IssuerAdded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": true, "internalType": "address", "name": "issuer", "type": "address" }
+    ],
+    "name": "IssuerRemoved",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "documentHash", "type": "bytes32" }
+    ],
+    "name": "addDocument",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "issuer", "type": "address" }
+    ],
+    "name": "addIssuer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "", "type": "address" }
+    ],
+    "name": "issuers",
+    "outputs": [
+      { "internalType": "bool", "name": "", "type": "bool" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      { "internalType": "address", "name": "", "type": "address" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "issuer", "type": "address" }
+    ],
+    "name": "removeIssuer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "documentHash", "type": "bytes32" }
+    ],
+    "name": "revokeDocument",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "documentHash", "type": "bytes32" }
+    ],
+    "name": "verifyDocument",
+    "outputs": [
+      { "internalType": "bool", "name": "exists", "type": "bool" },
+      { "internalType": "bool", "name": "revoked", "type": "bool" },
+      { "internalType": "address", "name": "issuer", "type": "address" },
+      { "internalType": "uint256", "name": "issuedAt", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
